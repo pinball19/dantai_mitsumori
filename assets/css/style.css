@@ -1,0 +1,1029 @@
+/* 全体のスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    background-image: linear-gradient(to bottom, #87ceeb, #f0f8ff, #f0f8ff, #f0f8ff);
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 0 0 5px 5px;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 5px;
+}
+
+.logo h1 {
+    color: #ff69b4;
+    font-size: 32px;
+    margin: 0;
+    display: inline-block;
+}
+
+.logo span {
+    color: #32cd32;
+}
+
+.logo-tagline {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* ナビゲーション */
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    border-right: 1px solid #ddd;
+}
+
+nav li:first-child {
+    border-left: 1px solid #ddd;
+}
+
+nav a {
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+
+/* トップバナー */
+.top-banner {
+    position: relative;
+    background: url('/api/placeholder/1100/500') center/cover;
+    height: 500px;
+    margin: 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.top-banner-content {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+}
+
+.top-banner-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ff4500;
+    animation: fadeInUp 1s ease-out;
+}
+
+.top-banner-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4);
+    color: white;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* ターゲット別セクション */
+.target-section {
+    padding: 0 20px 30px;
+}
+
+.target-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.target-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff4500;
+}
+
+.target-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.target-card {
+    width: 32%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.target-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.target-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.target-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+.target-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.target-btn {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.target-btn:hover {
+    background-color: #0052a3;
+    color: white;
+}
+
+/* AIチャット見積もりセクション */
+.ai-chat-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ai-chat-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.ai-chat-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff4500;
+}
+
+.ai-chat-section p {
+    font-size: 16px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #0066cc;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.chat-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #32cd32;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.chat-messages {
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    position: relative;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.bot-message {
+    background-color: #e6f2ff;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.user-message {
+    background-color: #0066cc;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    background-color: #e6f2ff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0066cc;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: typingDot 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingDot {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+}
+
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quick-reply {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-reply:hover {
+    background-color: #e0e0e0;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #0066cc;
+}
+
+.send-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #0052a3;
+}
+
+.send-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* 見積もり結果パネル */
+.estimate-panel {
+    margin-top: 30px;
+    display: none; /* 初期状態では非表示 */
+    animation: slideInFromRight 0.5s ease-out;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.estimate-header {
+    background-color: #ff4500;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.estimate-content {
+    padding: 20px;
+}
+
+.estimate-summary {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.estimate-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.estimate-total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4500;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.estimate-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.estimate-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.estimate-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: #ff6347;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.secondary-btn:hover {
+    background-color: #f0f8ff;
+}
+
+/* 特徴セクション */
+.features-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.features-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff4500;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-card {
+    width: 48%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f8ff;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0066cc;
+}
+
+.feature-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0066cc;
+}
+
+.feature-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 信頼性セクション */
+.trust-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.trust-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.trust-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff4500;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff4500;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+}
+
+.testimonials {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.testimonial-text:before {
+    content: '"';
+    font-size: 50px;
+    color: #ddd;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-info {
+    font-size: 14px;
+    color: #666;
+}
+
+/* FAQセクション */
+.faq-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.faq-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff4500;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:after {
+    content: '+';
+    font-size: 20px;
+    color: #0066cc;
+}
+
+.faq-question.active:after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: none;
+}
+
+/* CTAセクション */
+.cta-section {
+    padding: 60px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 追従CTA */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-cta-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.floating-chat-button {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.floating-cta-button:hover,
+.floating-chat-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.floating-chat-button:hover {
+    background-color: #0052a3;
+}
+
+.floating-cta-button:hover {
+    background-color: #ff6347;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    width: 23%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1000px) {
+    .target-card, .stat-item, .feature-card {
+        width: 48%;
+    }
+    
+    .footer-column {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-banner {
+        height: 400px;
+    }
+    
+    .top-banner-content h2 {
+        font-size: 28px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav li {
+        width: 33.33%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .target-card, .feature-card {
+        width: 100%;
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+    
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-image {
+        margin: 0 auto 15px;
+    }
+    
+    .chat-messages {
+        height: 350px;
+    }
+    
+    .floating-cta {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-banner-content h2 {
+        font-size: 24px;
+    }
+    
+    .top-banner-content p {
+        font-size: 16px;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    nav li {
+        width: 50%;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+    
+    .chat-messages {
+        height: 300px;
+        padding: 15px;
+    }
+    
+    .message {
+        max-width: 85%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .quick-replies {
+        margin-top: 5px;
+    }
+    
+    .quick-reply {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
